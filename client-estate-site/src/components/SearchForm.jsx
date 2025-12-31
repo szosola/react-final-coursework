@@ -1,21 +1,9 @@
-import { useState } from "react";
 import { DropdownList, NumberPicker, DatePicker, Combobox } from "react-widgets";
 
 const POSTCODE_OPTIONS = ["Any", "BR1", "BR3", "BR5", "BR6", "BR7", "DA15"];
 const TYPE_OPTIONS = ["Any", "House", "Flat"];
 
-function SearchForm() {
-  const [criteria, setCriteria] = useState({
-    type: "Any",
-    minPrice: null,
-    maxPrice: null,
-    minBeds: null,
-    maxBeds: null,
-    dateFrom: null,
-    dateTo: null,
-    postcode: "Any",
-  });
-
+function SearchForm({ criteria, setCriteria }) {
   return (
     <form>
       <h3>Search Properties</h3>

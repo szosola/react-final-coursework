@@ -5,7 +5,7 @@ function PropertyPage() {
 
   return (
     <div>
-      <h2>Property Deatails</h2>
+      <h2>Property Details</h2>
       <p>Property ID: {id}</p>
     </div>
   );
