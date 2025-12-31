@@ -31,5 +31,85 @@
                 "day":14,
                 "year":2022
             }
+        },
+        {
+            "id": "prop3",
+            "type": "House",
+            "bedrooms": 4,
+            "price": 925000,
+            "tenure": "Freehold",
+            "description": "Spacious four bedroom detached family home located in a quiet residential area. Features include a modern fitted kitchen, large living room, private garden and garage. Ideal for growing families.",
+            "location": "Chislehurst Road, Chislehurst BR7",
+            "picture": "images/prop3pic1small.jpg",
+            "url": "properties/prop3.html",
+            "added": {
+                "month": "November",
+                "day": 5,
+                "year": 2022
+            }
+        },
+        {
+            "id": "prop4",
+            "type": "Flat",
+            "bedrooms": 1,
+            "price": 275000,
+            "tenure": "Leasehold",
+            "description": "Well-presented one bedroom apartment located close to local amenities and transport links. The property offers an open-plan living area and a modern bathroom.",
+            "location": "High Street, Bromley BR1",
+            "picture": "images/prop4pic1small.jpg",
+            "url": "properties/prop4.html",
+            "added": {
+                "month": "August",
+                "day": 20,
+                "year": 2022
+            }
+        },
+        {
+            "id": "prop5",
+            "type": "House",
+            "bedrooms": 5,
+            "price": 1200000,
+            "tenure": "Freehold",
+            "description": "Impressive five bedroom semi-detached property offering generous living space across three floors. Benefits include a landscaped garden, off-street parking and excellent school catchment.",
+            "location": "Oakwood Avenue, Beckenham BR3",
+            "picture": "images/prop5pic1small.jpg",
+            "url": "properties/prop5.html",
+            "added": {
+                "month": "December",
+                "day": 1,
+                "year": 2022
+            }
+        },
+        {
+            "id": "prop6",
+            "type": "Flat",
+            "bedrooms": 3,
+            "price": 485000,
+            "tenure": "Leasehold",
+            "description": "Modern three bedroom apartment situated within a newly built development. Features include an open-plan kitchen, balcony access and secure entry system.",
+            "location": "Station Road, Orpington BR6",
+            "picture": "images/prop6pic1small.jpg",
+            "url": "properties/prop6.html",
+            "added": {
+                "month": "July",
+                "day": 10,
+                "year": 2022
+            }
+        },
+        {
+            "id": "prop7",
+            "type": "House",
+            "bedrooms": 2,
+            "price": 510000,
+            "tenure": "Freehold",
+            "description": "Charming two bedroom cottage-style home located in a peaceful neighbourhood. The property benefits from a spacious garden, refurbished interiors and excellent transport links.",
+            "location": "Manor Lane, Sidcup DA15",
+            "picture": "images/prop7pic1small.jpg",
+            "url": "properties/prop7.html",
+            "added": {
+                "month": "September",
+                "day": 30,
+                "year": 2022
+            }
         }
 ]}
