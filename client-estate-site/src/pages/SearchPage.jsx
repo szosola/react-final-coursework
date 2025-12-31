@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
 import propertiesData from "../data/properties.json"
+import SearchForm from "../components/SearchForm";
 
 function SearchPage() {
   return (
     <div>
+      <SearchForm />
+
       <h2>Available Properties</h2>
 
       {propertiesData.properties.map((property) => (
