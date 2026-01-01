@@ -1,0 +1,11 @@
+.search-page {
+  background-color: rgb(143, 143, 143);
+  padding: 16px;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-top: 12px;
+}

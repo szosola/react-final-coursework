@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import propertiesData from "../data/properties.json"
 import SearchForm from "../components/SearchForm";
 import { filterProperties } from "../utils/filterProperties";
+import PropertyCard from "../components/PropertyCard";
+import "./SearchPage.css";
 
 function SearchPage() {
   const [criteria, setCriteria] = useState({
@@ -19,25 +20,18 @@ function SearchPage() {
   const filteredProperties = filterProperties(propertiesData.properties, criteria);
 
   return (
-    <div>
+    <div className="search-page">
       <SearchForm criteria={criteria} setCriteria={setCriteria} />
 
       <h2>Available Properties</h2>
 
-      {filteredProperties.map((property) => (
-        <div key={property.id}>
-          <h3>{property.type}</h3>
-          <p>{property.location}</p>
-          <p>Bedrooms: {property.bedrooms}</p>
-          <p>Price: ${property.price.toLocaleString()}</p>
+      {filteredProperties.length === 0 && <p>No properties match your search.</p>}
 
-          <Link to={`/property/${property.id}`}>
-            View Property
-          </Link>
-
-          <hr />
-        </div>
-      ))}
+      <div className="results-grid">
+        {filteredProperties.map((property) => (
+          <PropertyCard key={property.id} property={property} />
+        ))}
+      </div>
     </div>
   );
 }

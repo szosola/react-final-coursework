@@ -1,0 +1,40 @@
+.property-card {
+  display: flex;
+  gap: 16px;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #fff;
+  align-items: center;
+}
+.property-info {
+  flex: 1;
+}
+
+.property-title {
+  margin: 0 0 6px 0;
+}
+
+.property-location {
+  margin: 0 0 8px 0;
+  color: #444;
+}
+
+.property-meta {
+  margin: 0 0 8px 0;
+}
+
+.property-price {
+  margin: 0 0 10px 0;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.property-link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #1f2933;
+  color: #1f2933;
+}
