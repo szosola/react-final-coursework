@@ -14,6 +14,10 @@ function PropertyCard({property}) {
         <h3 className="property-title">{property.type}</h3>
         <p className="property-location">{property.location}</p>
 
+        <p className="property-desc">
+          {property.description.replace(/<br\s*\/?>/gi, " ").slice(0, 120)}...
+        </p>
+
         <p className="property-meta">
           Bedrooms: {property.bedrooms}
         </p>
