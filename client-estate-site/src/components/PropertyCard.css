@@ -55,3 +55,20 @@
   border: 1px solid #1f2933;
   color: #1f2933;
 }
+
+.property-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.fav-btn {
+  border: 1px solid #1f2933;
+  background: white;
+  color: #1f2933;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+

@@ -1,0 +1,54 @@
+.fav-panel {
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 16px;
+  text-align: left;
+  color: #1f2933;
+}
+
+.fav-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 0;
+  border-top: 1px solid #eee;
+}
+
+.fav-title {
+  margin: 0;
+  font-weight: bold;
+}
+
+.fav-sub {
+  margin: 2px 0;
+  color: #444;
+  font-size: 0.9rem;
+}
+
+.fav-price {
+  margin: 2px 0 6px 0;
+  font-weight: 600;
+}
+
+.fav-remove {
+  border: 1px solid #b91c1c;
+  background: white;
+  color: #b91c1c;
+  border-radius: 8px;
+  padding: 8px 10px;
+  cursor: pointer;
+  height: fit-content;
+}
+
+.fav-clear {
+  margin-top: 12px;
+  border: 1px solid #1f2933;
+  background: #1f2933;
+  color: white;
+  border-radius: 8px;
+  padding: 10px 12px;
+  cursor: pointer;
+  width: 100%;
+}

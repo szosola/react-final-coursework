@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import propertiesData from "../data/properties.json";
+import { useFavourites } from "../context/FavouritesContext";
 import "./PropertyPage.css";
 
 // Tabs
@@ -19,6 +20,10 @@ function PropertyPage() {
 
   // Find property by id
   const property = propertiesData.properties.find((p) => p.id === id);
+
+  const { favourites, addFavourite, removeFavourite } = useFavourites();
+  const isFav = favourites.includes(property.id);
+
 
   useEffect(() => {
     if (property && property.images && property.images.length > 0) {
@@ -60,6 +65,13 @@ function PropertyPage() {
       <p>£{property.price.toLocaleString()}</p>
 
       <div className="gallery">
+        <button
+        type="button"
+        onClick={() => (isFav ? removeFavourite(property.id) : addFavourite(property.id))}
+      >
+        {isFav ? "★ Saved" : "☆ Save to favourites"}
+      </button>
+
         <img
           className="gallery-main"
           src={`/${mainImage}`}

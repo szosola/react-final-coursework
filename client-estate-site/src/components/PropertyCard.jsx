@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom";
+import { useFavourites } from "../context/FavouritesContext";
 import "./PropertyCard.css";
 
 function PropertyCard({property}) {
+  const { favourites, addFavourite, removeFavourite } = useFavourites();
+  const isFav = favourites.includes(property.id);
+
+
   return (
     <div className="property-card">
       <img
@@ -26,9 +31,20 @@ function PropertyCard({property}) {
           £{property.price.toLocaleString()}
         </p>
 
-        <Link className="property-link" to={`/property/${property.id}`}>
-          View Property
-        </Link>
+        <div className="property-actions">
+          <Link className="property-link" to={`/property/${property.id}`}>
+            View Property
+          </Link>
+
+          <button
+            type="button"
+            className="fav-btn"
+            onClick={() => (isFav ? removeFavourite(property.id) : addFavourite(property.id))}
+            aria-label="Toggle favourite"
+          >
+            {isFav ? "★" : "☆"}
+          </button>
+        </div>
       </div>
     </div>
   );

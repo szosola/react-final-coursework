@@ -3,6 +3,7 @@ import propertiesData from "../data/properties.json"
 import SearchForm from "../components/SearchForm";
 import { filterProperties } from "../utils/filterProperties";
 import PropertyCard from "../components/PropertyCard";
+import FavouritesPanel from "../components/FavouritesPanel";
 import "./SearchPage.css";
 
 function SearchPage() {
@@ -21,6 +22,7 @@ function SearchPage() {
 
   return (
     <div className="search-page">
+      <FavouritesPanel />
       <SearchForm criteria={criteria} setCriteria={setCriteria} />
 
       <h2>Available Properties</h2>
