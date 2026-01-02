@@ -1,0 +1,85 @@
+.property-page {
+  padding: 16px;
+  color: black;
+}
+
+.property-top {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.property-title {
+  margin: 0 0 8px 0;
+}
+
+.property-location {
+  margin: 0 0 12px 0;
+  color: #444;
+}
+
+.property-price {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 0 0 8px 0;
+}
+
+.property-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 0 14px 0;
+}
+
+.meta-pill {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 0.9rem;
+}
+
+.gallery {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.gallery-main {
+  width: 100%;
+  max-height: 380px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #eee;
+}
+
+.thumbs {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.thumb-btn {
+  border: 1px solid #ddd;
+  background: transparent;
+  padding: 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.thumb-img {
+  width: 90px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.description-box {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 12px;
+}
