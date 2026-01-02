@@ -21,6 +21,7 @@
 }
 
 .property-title {
+  color: #1f2933;
   margin: 0 0 6px 0;
 }
 
@@ -36,12 +37,14 @@
 
 .property-meta {
   margin: 0 0 8px 0;
+  color: #1f2933;
 }
 
 .property-price {
   margin: 0 0 10px 0;
   font-weight: bold;
   font-size: 1.1rem;
+  color: #1f2933;
 }
 
 .property-link {

@@ -3,17 +3,28 @@ import { useParams, Link } from "react-router-dom";
 import propertiesData from "../data/properties.json";
 import "./PropertyPage.css";
 
+// Tabs
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import "react-tabs/style/react-tabs.css";
+
+// Lightbox
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
+
 function PropertyPage() {
   const { id } = useParams();
 
   const [mainImage, setMainImage] = useState("");
+  const [lightboxOpen, setLightboxOpen] = useState(false);
 
   // Find property by id
   const property = propertiesData.properties.find((p) => p.id === id);
 
   useEffect(() => {
-    if (property && property.picture) {
+    if (property && property.images && property.images.length > 0) {
       // eslint-disable-next-line react-hooks/set-state-in-effect
+      setMainImage(property.images[0]);
+    } else if (property && property.picture) {
       setMainImage(property.picture);
     }
   }, [property]);
@@ -27,11 +38,18 @@ function PropertyPage() {
     );
   }
 
-  // Temporary gallery: repeats the same image 3 times (until add real images per property)
-  const images = [property.picture, property.picture, property.picture];
+  const images = property.images && property.images.length > 0 ? property.images : [property.picture, property.picture, property.picture];
 
-  // Remove <br> safely so it doesn't show as HTML
+   // Convert images into lightbox slides format
+  const slides = images.map((img) => ({ src: `/${img}`}));
+
   const safeDescription = property.description.replace(/<br\s*\/?>/gi, " ");
+
+  // Google maps embed URL (simple)
+  const mapUrl =
+    property.lat && property.lng
+      ? `https://www.google.com/maps?q=${property.lat},${property.lng}&z=15&output=embed`
+      : null;
 
   return (
     <div className="property-page">
@@ -64,9 +82,64 @@ function PropertyPage() {
             </button>
           ))}
         </div>
+
+        <button
+          type="button"
+          className="view-all-btn"
+          onClick={() => setLightboxOpen(true)}
+        >
+          View all images
+        </button>
+
+        <Lightbox
+          open={lightboxOpen}
+          close={() => setLightboxOpen(false)}
+          slides={slides}
+        />
       </div>
 
-      <p>{safeDescription}</p>
+      {/* Tabs */}
+      <div className="tabs-box">
+        <Tabs>
+          <TabList>
+            <Tab>Description</Tab>
+            <Tab>Floor Plan</Tab>
+            <Tab>Map</Tab>
+          </TabList>
+
+          <TabPanel>
+            <p>{safeDescription}</p>
+          </TabPanel>
+
+          <TabPanel>
+            {property.floorPlan ? (
+              <img
+                src={`/${property.floorPlan}`}
+                alt="Floor plan"
+                style={{ width: "100%", maxWidth: "700px" }}
+              />
+            ) : (
+              <p>No floor plan available.</p>
+            )}
+          </TabPanel>
+
+          <TabPanel>
+            {mapUrl ? (
+              <iframe
+                title="Google Map"
+                src={mapUrl}
+                width="100%"
+                height="350"
+                style={{ border: 0 }}
+                loading="lazy"
+                allowFullScreen
+              ></iframe>
+            ) : (
+              <p>No map coordinates available.</p>
+            )}
+          </TabPanel>
+        </Tabs>
+      </div>
     </div>
   );
 }
