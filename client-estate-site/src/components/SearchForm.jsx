@@ -1,5 +1,4 @@
 import { DropdownList, NumberPicker, DatePicker, Combobox } from "react-widgets";
-import "react-widgets/styles.css";
 
 const POSTCODE_OPTIONS = ["Any", "BR1", "BR3", "BR5", "BR6", "BR7", "DA15"];
 const TYPE_OPTIONS = ["Any", "House", "Flat"];

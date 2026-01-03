@@ -22,8 +22,6 @@ function PropertyPage() {
   const property = propertiesData.properties.find((p) => p.id === id);
 
   const { favourites, addFavourite, removeFavourite } = useFavourites();
-  const isFav = favourites.includes(property.id);
-
 
   useEffect(() => {
     if (property && property.images && property.images.length > 0) {
@@ -42,6 +40,8 @@ function PropertyPage() {
       </div>
     );
   }
+
+  const isFav = favourites.includes(property.id);
 
   const images = property.images && property.images.length > 0 ? property.images : [property.picture, property.picture, property.picture];
 
