@@ -1,19 +1,33 @@
 import { Link } from "react-router-dom";
 import { useFavourites } from "../context/FavouritesContext";
+import { useDraggable } from "@dnd-kit/core";
 import "./PropertyCard.css";
 
 function PropertyCard({property}) {
+  const { attributes, listeners, setNodeRef, transform } = useDraggable({
+    id: property.id,
+  });
+
+  const style = transform
+  ? { transform: `translate3d(${transform.x}px, ${transform.y}px, 0)` }
+  : undefined;
+
   const { favourites, addFavourite, removeFavourite } = useFavourites();
   const isFav = favourites.includes(property.id);
 
 
   return (
-    <div className="property-card">
+    <div ref={setNodeRef} style={style} className="property-card">
       <img
         className="property-image"
         src={`/${property.picture}`}
         alt={`${property.type} in ${property.location}`}
       />
+
+      <span className="drag-handle" {...listeners} {...attributes} title="Drag">
+        ⠿
+      </span>
+
 
       <div className="property-info">
         <h3 className="property-title">{property.type}</h3>

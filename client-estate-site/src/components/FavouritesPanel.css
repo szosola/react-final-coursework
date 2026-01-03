@@ -52,3 +52,17 @@
   cursor: pointer;
   width: 100%;
 }
+
+.fav-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fav-drag {
+  color: #1f2933;
+  cursor: grab;
+  user-select: none;
+  font-size: 18px;
+}
+

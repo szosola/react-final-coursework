@@ -72,3 +72,11 @@
   cursor: pointer;
 }
 
+.drag-handle {
+  color: #1f2933;
+  margin-left: auto;
+  cursor: grab;
+  font-size: 20px;
+  user-select: none;
+}
+
