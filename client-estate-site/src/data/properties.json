@@ -16,7 +16,9 @@
                 "images/prop1/3.jpg",
                 "images/prop1/4.jpg",
                 "images/prop1/5.jpg",
-                "images/prop1/6.jpg"
+                "images/prop1/6.jpg",
+                "images/prop1/7.jpg",
+                "images/prop1/8.jpg"
             ],
             "floorPlan": "images/prop1/floorplan.jpg",
             "lat": 51.3882,
@@ -43,7 +45,8 @@
                 "images/prop2/3.jpg",
                 "images/prop2/4.jpg",
                 "images/prop2/5.jpg",
-                "images/prop2/6.jpg"
+                "images/prop2/6.jpg",
+                "images/prop2/7.jpg"
             ],
             "floorPlan": "images/prop2/floorplan.jpg",
             "lat": 51.3748,
@@ -70,7 +73,8 @@
                 "images/prop3/3.jpg",
                 "images/prop3/4.jpg",
                 "images/prop3/5.jpg",
-                "images/prop3/6.jpg"
+                "images/prop3/6.jpg",
+                "images/prop3/7.jpg"
             ],
             "floorPlan": "images/prop3/floorplan.jpg",
             "lat": 51.4187,
@@ -124,7 +128,9 @@
                 "images/prop5/3.jpg",
                 "images/prop5/4.jpg",
                 "images/prop5/5.jpg",
-                "images/prop5/6.jpg"
+                "images/prop5/6.jpg",
+                "images/prop5/7.jpg",
+                "images/prop5/8.jpg"
             ],
             "floorPlan": "images/prop5/floorplan.jpg",
             "lat": 51.4055,
