@@ -1,0 +1,41 @@
+.search-form {
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 12px;
+  padding: 12px;
+  text-align: left;
+  color: #1f2933;
+}
+
+.search-form h3 {
+  margin: 0 0 12px 0;
+}
+
+.form-row {
+  margin-bottom: 12px;
+}
+
+.form-row label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.form-actions {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.reset-btn {
+  border: 1px solid #1f2933;
+  background: #1f2933;
+  color: white;
+  border-radius: 8px;
+  padding: 10px 12px;
+  cursor: pointer;
+}
+
+.reset-btn:hover {
+  opacity: 0.9;
+}
