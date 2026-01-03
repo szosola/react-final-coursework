@@ -46,22 +46,26 @@ function SearchPage() {
   return (
     <DndContext onDragEnd={handleDragEnd}>
       <div className="search-page">
-        <FavouritesDropZone>
-          <FavouritesPanel />
-        </FavouritesDropZone>
+        <div>
+          <FavouritesDropZone>
+            <FavouritesPanel />
+          </FavouritesDropZone>
 
-        <RemoveDropZone />
+          <RemoveDropZone />
+        </div>
 
-        <SearchForm criteria={criteria} setCriteria={setCriteria} />
+        <div>
+          <SearchForm criteria={criteria} setCriteria={setCriteria} />
 
-        <h2>Available Properties</h2>
+          <h2>Available Properties</h2>
 
-        {filteredProperties.length === 0 && <p>No properties match your search.</p>}
+          {filteredProperties.length === 0 && <p>No properties match your search.</p>}
 
-        <div className="results-grid">
-          {filteredProperties.map((property) => (
-            <PropertyCard key={property.id} property={property} />
-          ))}
+          <div className="results-grid">
+            {filteredProperties.map((property) => (
+              <PropertyCard key={property.id} property={property} />
+            ))}
+          </div>
         </div>
       </div>
     </DndContext>
