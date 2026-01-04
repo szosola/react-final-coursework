@@ -1,4 +1,5 @@
 import { createContext, useContext, useState } from "react";
+import { addFavouriteId, removeFavouriteId } from "../utils/favouritesUtils";
 
 const FavouritesContext = createContext();
 
@@ -6,13 +7,11 @@ export function FavouritesProvider({ children }) {
   const [favourites, setFavourites] = useState([]);
 
   const addFavourite = (id) => {
-    if (!favourites.includes(id)) {
-      setFavourites([...favourites, id]);
-    }
+    setFavourites((prev) => addFavouriteId(prev, id));
   };
 
   const removeFavourite = (id) => {
-    setFavourites(favourites.filter((favId) => favId !== id));
+    setFavourites((prev) => removeFavouriteId(prev, id));
   };
 
   const clearFavourites = () => {
